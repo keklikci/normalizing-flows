@@ -1,5 +1,16 @@
 # Normalizing Flows
 
+### Overview
+
+* Preliminary 
+  * two dimensional masked autoregressive flow in jupyter notebook
+
+* Multivariate 
+  * n-dimensional flow implementations in jupyter notebook
+
+* Scripts
+  * modular python implementations of multivariate folder
+
 ### Implementation 
 
 * Parameters
