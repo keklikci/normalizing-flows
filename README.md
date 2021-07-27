@@ -28,4 +28,4 @@
   * robustness
 
 ### Reference 
-* This repository is inspired by the great tutorial by [Eric Jang on normalizing flows](https://github.com/ericjang/normalizing-flows-tutorial) and [TensorFlow probability docs.](https://www.tensorflow.org/probability)
+* This repository is inspired by [Eric Jang](https://github.com/ericjang/normalizing-flows-tutorial) and [TensorFlow probability docs.](https://www.tensorflow.org/probability)
