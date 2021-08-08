@@ -10,8 +10,16 @@ plt.style.use('seaborn')
 tfd = tfp.distributions
 tfb = tfp.bijectors
 
-class MAF:
-    def __init__(self, dtype, tf_version, batch_size, params, hidden_units, base_dist, dims):
+class MAF(object):
+    def __init__(self, dtype, tf_version, 
+                 batch_size, params, hidden_units, 
+                 base_dist, dims,
+                 activation,
+                 conditional, hidden_degrees, 
+                 conditional_event_shape,
+                 conditional_input_layers,
+                 event_shape):
+        
         self.tf_version = tf_version
         self.dtype = dtype
         self.base_dist = base_dist
@@ -19,6 +27,12 @@ class MAF:
         self.params = params 
         self.hidden_units = hidden_units 
         self.batch_size = batch_size
+        self.activation = activation 
+        self.conditional = conditional
+        self.conditional_event_shape = conditional_event_shape
+        self.hidden_degrees = hidden_degrees
+        self.conditional_input_layers = conditional_input_layers
+        self.event_shape = event_shape
         
     def get_tf_version(self):
         return self.tf_version
@@ -39,8 +53,16 @@ class MAF:
         samples = data_iterator.get_next()
         return samples
     
-    def get_shift_scale_func(self, data):
-        func = tfb.AutoregressiveNetwork(params=self.params, hidden_units=self.hidden_units)
+    def get_shift_scale_func(self):
+        func = tfb.AutoregressiveNetwork(params=self.params, 
+                                         hidden_units=self.hidden_units,
+                                         activation=self.activation,
+                                         conditional=self.conditional,
+                                         conditional_event_shape=self.conditional_event_shape,
+                                         event_shape=self.event_shape,
+                                         conditional_input_layers=self.conditional_input_layers,
+                                         hidden_degrees=self.hidden_degrees
+                                         )
         return func 
     
     def make_maf(self, data):
@@ -50,4 +72,14 @@ class MAF:
         bijector = tfb.MaskedAutoregressiveFlow(shift_scale_function)
         maf = tfd.TransformedDistribution(tfd.Sample(distribution, sample_shape), bijector)
         return maf
+    
+class IAF(MAF):
+    def make_maf(self, data):
+        distribution = self.base_dist
+        sample_shape = self.get_dims(data)
+        shift_scale_function = self.get_shift_scale_func()
+        bijector = tfb.Invert(tfb.MaskedAutoregressiveFlow(shift_scale_function))
+        maf = tfd.TransformedDistribution(tfd.Sample(distribution, sample_shape), bijector)
+        return maf
+    
  

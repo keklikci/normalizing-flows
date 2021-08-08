@@ -92,10 +92,23 @@ def main():
     dims = data.shape[1]
     learning_rate = 1e-4
     steps = 1e4
-
+    activation = 'relu'
+    hidden_degrees = 'random'
+    conditional=True
+    conditional_event_shape = (dims,)
+    event_shape = conditional_event_shape
+    conditional_input_layers = 'first_layer'
+    
     """ initialize samples """
 
-    maf = MAF(dtype, tf_version, batch_size, params, hidden_units, base_dist, dims)
+    maf = MAF(dtype, tf_version, batch_size, 
+              params, hidden_units, base_dist, dims,
+              activation,
+              conditional, hidden_degrees, 
+              conditional_event_shape,
+              conditional_input_layers,
+              event_shape
+             )
 
     dims = maf.get_dims(data)
     samples = maf.create_tensor(data)
@@ -110,7 +123,7 @@ def main():
     
     """ initialize loss and optimizer """
 
-    loss = -tf.reduce_mean(maf.log_prob(samples))
+    loss = -tf.reduce_mean(maf.log_prob(samples, bijector_kwargs={'conditional_input': samples}))    
     optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate).minimize(loss)
     
     experiment = Experiment(optimizer, learning_rate, loss, steps)
@@ -137,4 +150,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+
+
+
 

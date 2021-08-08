@@ -8,6 +8,7 @@ tf.compat.v1.disable_eager_execution()
 import tensorflow_probability as tfp
 
 import matplotlib.pyplot as plt
+plt.style.use('seaborn')
 
 from data_loader import load_data
 from data_preprocesser import preprocess_data
@@ -27,7 +28,6 @@ def train(session, loss, optimizer, steps=int(1e5)):
         if i % int(1e4) == 0:
             print('Iteration {iteration}: {loss}'.format(iteration=i,loss=loss_per_iteration))
     return recorded_losses
-
 
 def plot_results(recorded_losses):
     
@@ -81,10 +81,23 @@ def main():
     base_dist = tfp.distributions.Normal(loc=0., scale=1.)
     dims = data.shape[1]
     learning_rate = 1e-4
+    activation = 'relu'
+    hidden_degrees = 'random'
+    conditional=True
+    conditional_event_shape = (dims,)
+    event_shape = conditional_event_shape
+    conditional_input_layers = 'first_layer'
     
     """ initialize samples """
 
-    maf = MAF(dtype, tf_version, batch_size, params, hidden_units, base_dist, dims)
+    maf = MAF(dtype, tf_version, batch_size, 
+              params, hidden_units, base_dist, dims,
+              activation,
+              conditional, hidden_degrees, 
+              conditional_event_shape,
+              conditional_input_layers,
+              event_shape
+             )
 
     dims = maf.get_dims(data)
     samples = maf.create_tensor(data)
@@ -99,7 +112,7 @@ def main():
     
     """ initialize loss and optimizer """
 
-    loss = -tf.reduce_mean(maf.log_prob(samples))
+    loss = -tf.reduce_mean(maf.log_prob(samples, bijector_kwargs={'conditional_input': samples}))
     optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate).minimize(loss)
 
     session = tf.compat.v1.Session()
