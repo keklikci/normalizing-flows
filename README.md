@@ -12,7 +12,7 @@
 
 * Parameters
   * number of hidden layers
-  * base distribution
+  * base distribution -- [always use Gaussian]
   * bijector count
   * neuron size
   * optimizers 
