@@ -6,7 +6,7 @@
   * n-dimensional flow implementations in jupyter notebook
 
 * Scripts
-  * modular python implementations of multivariate folder
+  * modular python implementations of flows
 
 ### Implementation 
 
