@@ -2,10 +2,7 @@
 
 ### Overview
 
-* Preliminary 
-  * two dimensional masked autoregressive flow in jupyter notebook
-
-* Multivariate 
+* Notebooks 
   * n-dimensional flow implementations in jupyter notebook
 
 * Scripts
