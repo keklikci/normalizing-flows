@@ -68,7 +68,7 @@ class MAF(object):
     def make_maf(self, data):
         distribution = self.base_dist
         sample_shape = self.get_dims(data)
-        shift_scale_function = self.get_shift_scale_func(data)
+        shift_scale_function = self.get_shift_scale_func()
         bijector = tfb.MaskedAutoregressiveFlow(shift_scale_function)
         maf = tfd.TransformedDistribution(tfd.Sample(distribution, sample_shape), bijector)
         return maf
