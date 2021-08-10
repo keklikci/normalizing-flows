@@ -62,6 +62,10 @@ def check_version():
     print(f'Tensorflow-probability version: {tfp.__version__}')
     print(f'Keras version: {tf.keras.__version__}\n')
 
+
+# In[ ]:
+
+
 def main():
     
     """ load data """
@@ -95,7 +99,7 @@ def main():
 
     batch_size = 32
     dtype = np.float32
-    layers = 2
+    layers = 8
     dims = data.shape[1]
     # multivariate normal for base distribution
     base_dist = tfd.MultivariateNormalDiag(loc=tf.zeros(shape=dims, dtype=dtype))
@@ -108,7 +112,7 @@ def main():
 
     bijectors = []
     for i in range(0, layers):
-        bijectors.append(PlanarFlow(input_dimensions=dims, case='density_estimation'))
+        bijectors.append(Planar(input_dimensions=dims, case='density_estimation'))
     bijector = tfb.Chain(bijectors=list(reversed(bijectors)), name='chain_of_planar')
     planar_flow = tfd.TransformedDistribution(
         distribution=base_dist,
@@ -133,4 +137,8 @@ def main():
     
 if __name__ == "__main__":
     main()
+
+
+
+
 
