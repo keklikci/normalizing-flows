@@ -12,7 +12,7 @@
 
 * Parameters
   * number of hidden layers
-  * base distribution -- [always use Gaussian]
+  * base distribution -- [Gaussian converges better than uniform in most experiments]
   * bijector count
   * neuron size
   * optimizers 
