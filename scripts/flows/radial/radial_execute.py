@@ -41,15 +41,15 @@ def main():
     
     """ define the base distributon as bivariate gaussian """
 
-    base_dist = tfd.Independent(tfd.Normal(loc=[0., 0.], scale=[1.,1.]),
+    base_dist = tfd.Independent(tfd.Normal(loc=[2., -0.5], scale=[1.,1.]),
                               reinterpreted_batch_ndims=1)
     
     """ instantiate the bijector (a,b,x0) """
 
     n = 1000
-    a = 2.
-    b = -1.99
-    x0 = np.array([0.,1.]).astype(np.float32).reshape(-1, 2)
+    a = 10.
+    b = -10.
+    x0 = np.array([-0.5,1.]).astype(np.float32).reshape(-1, 2)
     bijector = RadialFlow(a, b, x0)
     print(f'x0 shape: {x0.shape}')
 
@@ -72,7 +72,7 @@ def main():
     
     """ create transformed distribution """
     tfd_dist = tfd.TransformedDistribution(distribution=base_dist, 
-                                          bijector=bijector
+                                           bijector=bijector
                                          )
     # prior training
 
@@ -105,6 +105,7 @@ def main():
                                             name='beta'), 
                                     tf.Variable(x0, 
                                             name='ref'))
+                                   
 
     # instantiate trainable distribution 
 
@@ -164,10 +165,11 @@ def main():
     ### DO NOT CHANGE validate_args=True
     
     ### DOES NOT USE DATASET YET
-    ### FOR VISUALIZATION PURPOSES IN 3D
+    ### FOR VISUALIZATION PURPOSES IN 2D
     ### WILL INTEGRATE DATASET AFTER LEARNING THE DISTRIBUTION
 
 if __name__ == '__main__':
     main()
+
 
 
