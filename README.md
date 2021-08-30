@@ -13,9 +13,9 @@
 
 ### Implementation [subject to project scope]
 
-* Parameters [subject to project scope]
+* Parameters 
   * number of hidden layers
-  * base distribution -- [gaussian converges better than uniform in most experiments]
+  * base distribution [gaussian converges better than uniform in most experiments]
   * bijector count
   * neuron size
   * optimizers 
