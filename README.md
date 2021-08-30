@@ -28,7 +28,7 @@
   * robustness
 
 ### Updates 
-* [Discard experiments directory.](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments)
+* [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
 * [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. 
 * [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for the most recent implementations; incl. visuals.
 
