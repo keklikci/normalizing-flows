@@ -20,17 +20,17 @@
   * neuron size
   * optimizers 
   * iteration count
+
+### Updates 
+* [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
+* [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. 
+* [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for the most recent implementations; incl. visuals.
   
 ### Performance Evaluation [subject to project scope]
 * Performance evaluation will be done at the end of the project.
   * convergence time
   * correctness
   * robustness
-
-### Updates 
-* [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
-* [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. 
-* [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for the most recent implementations; incl. visuals.
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
