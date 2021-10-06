@@ -2,39 +2,34 @@
 
 ### Overview
 
-* Notebooks 
-  * n-dimensional flow implementations in jupyter notebook
-
-* Scripts
-  * modular python implementations of flows
+* Beta-VAE-Normalizing-Flows
+  * pipeline implementations
+  * this is essentially the source code of full project
+  * refer to other directories first if you don't want to take a fast-track
 
 * Noisy moons
   * initial test data; [see usage](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
+
+* Thoracic surgery 
+  * current test data; [find out more](https://www.kaggle.com/sid321axn/thoraric-surgery)
 
 * Beta-VAE 
   * variational autoencoder algorithm extended with a beta parameter to put implicit indepence pressure on the learnt posterior
   * [find out more](https://paperswithcode.com/method/beta-vae)
 
-### Implementation [subject to project scope]
-
-* Parameters 
-  * number of hidden layers
-  * base distribution [gaussian converges better than uniform in most experiments]
-  * bijector count
-  * neuron size
-  * optimizers 
-  * iteration count
-
 ### Updates 
 * [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
-* [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. 
-* [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for the most recent implementations; incl. visuals.
+* [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` with v1.1 preprocessing script.  
+* [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for noisy moons.
+* [Refer to beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of data of this commit.
   
-### Performance Evaluation [subject to project scope]
+### Performance Evaluation 
+* Statistical measures are in progress, CI's under different alpha values along with p-values under pre-determined, fixed number of runs
 * Performance evaluation will be done at the end of the project
-  * convergence time
-  * correctness
-  * robustness
+ * KL Divergence
+ * Poisson
+ * MAE
+ * Cross Entropy
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
