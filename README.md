@@ -3,7 +3,7 @@
 ### Overview
 
 * Beta-VAE-Normalizing-Flows
-  * pipeline implementations
+  * Beta VAE piped with a normalizing flow
   * this is essentially the source code of full project
   * refer to other directories first if you don't want to take a fast-track
 
@@ -14,22 +14,22 @@
   * current test data; [find out more](https://www.kaggle.com/sid321axn/thoraric-surgery)
 
 * Beta-VAE 
-  * variational autoencoder algorithm extended with a beta parameter to put implicit indepence pressure on the learnt posterior
+  * variational autoencoder algorithm extended with a beta parameter to put implicit pressure on the learnt posterior
   * [find out more](https://paperswithcode.com/method/beta-vae)
 
 ### Updates 
 * [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
-* [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` with v1.1 preprocessing script.  
+* [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` with [`preprocessing_v1.1.ipynb`](https://github.com/kaanguney/normalizing_flows/blob/main/beta-vae-normalizing-flows/thoracic-surgery/preprocessing/preprocessing_v1.1.ipynb)
 * [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for noisy moons.
 * [Refer to beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of data of this commit.
   
 ### Performance Evaluation 
-* Statistical measures are in progress, CI's under different alpha values along with p-values under pre-determined, fixed number of runs
 * Performance evaluation will be done at the end of the project
  * KL Divergence
  * Poisson
  * MAE
  * Cross Entropy
+* Statistical measures are in progress, CI's under different alpha values along with p-values under pre-determined, fixed number of runs
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
