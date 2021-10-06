@@ -1,7 +1,6 @@
 # Normalizing Flows
 
 ### Overview
-
 * Beta-VAE + normalizing flows
   * Beta VAE piped with a normalizing flow
   * this is essentially the source code of full project
