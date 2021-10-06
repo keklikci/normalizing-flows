@@ -25,10 +25,10 @@
   
 ### Performance Evaluation 
 * Performance evaluation will be done at the end of the project
- * KL Divergence
- * Poisson
- * MAE
- * Cross Entropy
+  * KL Divergence
+  * Poisson
+  * MAE
+  * Cross Entropy
 * Statistical measures are in progress, CI's under different alpha values along with p-values under pre-determined, fixed number of runs
 
 ### References
