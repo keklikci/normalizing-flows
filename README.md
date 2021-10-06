@@ -21,7 +21,7 @@
 * [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
 * [Pre-processing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` with [`preprocessing_v1.1.ipynb`](https://github.com/kaanguney/normalizing_flows/blob/main/beta-vae-normalizing-flows/thoracic-surgery/preprocessing/preprocessing_v1.1.ipynb)
 * [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for noisy moons.
-* [Refer to beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of data of this commit.
+* [Refer to beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of date of this commit.
   
 ### Performance Evaluation 
 * Performance evaluation will be done at the end of the project
@@ -29,7 +29,7 @@
   * Poisson
   * MAE
   * Cross Entropy
-* Statistical measures are in progress, CI's under different alpha values along with p-values under pre-determined, fixed number of runs
+* Statistical measures are in progress, ex. CI's, p-values, etc. if needed
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
