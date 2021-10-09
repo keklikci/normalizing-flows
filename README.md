@@ -19,7 +19,6 @@
 ### Updates 
 * [Discard experiments directory](https://github.com/kaanguney/normalizing_flows/tree/main/notebooks/experiments).
 * [Preprocessing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` as well.
-* [Refer to noisy-moons directory](https://github.com/kaanguney/normalizing_flows/tree/main/noisy-moons) for noisy moons.
 * [Refer to beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of date of this commit.
   
 ### Performance Evaluation 
