@@ -1,4 +1,4 @@
-# normalizing flows
+# Beta Variational Autoencoder + Normalizing Flows
 
 ### Overview
 * Beta-VAE + normalizing flows
