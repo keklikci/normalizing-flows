@@ -23,12 +23,10 @@
 * [Refer to beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of date of this commit.
   
 ### Performance Evaluation 
-* Performance evaluation will be done at the end of the project
   * KL Divergence
   * Poisson
   * MAE
   * Cross Entropy
-* Statistical measures are in progress - ex. CI's, p-values, etc. if needed
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
