@@ -1,4 +1,4 @@
-# Normalizing Flows
+# normalizing flows
 
 ### Overview
 * Beta-VAE + normalizing flows
