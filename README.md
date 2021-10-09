@@ -7,10 +7,10 @@
   * refer to other directories first if you don't want to take a fast-track
 
 * Noisy moons
-  * initial test data; [see usage](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
+  * initial test data - [see usage](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
 
 * Thoracic surgery 
-  * current test data; [find out more](https://www.kaggle.com/sid321axn/thoraric-surgery)
+  * current test data - [find out more](https://www.kaggle.com/sid321axn/thoraric-surgery)
 
 * Beta-VAE 
   * variational autoencoder algorithm extended with a beta parameter to put implicit pressure on the learnt posterior
@@ -28,7 +28,7 @@
   * Poisson
   * MAE
   * Cross Entropy
-* Statistical measures are in progress, ex. CI's, p-values, etc. if needed
+* Statistical measures are in progress - ex. CI's, p-values, etc. if needed
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
