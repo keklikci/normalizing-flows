@@ -23,7 +23,6 @@
   
 ### Performance Evaluation 
   * KL Divergence
-  * Poisson
   * MAE
   * Cross Entropy
 
