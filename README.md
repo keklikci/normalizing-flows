@@ -1,7 +1,7 @@
-# Beta-Variational-Autoencoder-Normalizing-Flows
+# Beta-VAE-Normalizing-Flows
 
 ### Overview
-* Beta-Variational-Autoencoder-Normalizing-Flows
+* Beta-VAE-Normalizing-Flows
   * Beta VAE connected to a normalizing flow of selection
 
 * Noisy moons
