@@ -25,6 +25,7 @@
   * KL Divergence
   * MAE
   * Cross Entropy
+  * [2-dimensional Kolmogorov-Smirnov Test](Khttps://github.com/syrte/ndtest/blob/master/ndtest.py)
 
 ### References
 * Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
