@@ -2,7 +2,7 @@
 
 ### Overview
 * Beta-Variational-Autoencoder-Normalizing-Flows
-  * Beta VAE piped with a normalizing flow
+  * Beta VAE connected to a normalizing flow of selection
   * this is essentially the source code of full project
   * refer to other directories first if you don't want to take a fast-track
 
