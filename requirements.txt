@@ -33,6 +33,8 @@ googleapis-common-protos==1.53.0
 grpcio==1.34.1
 h5py==3.1.0
 idna==3.2
+imbalanced-learn==0.8.1
+imblearn==0.0
 importlib-metadata @ file:///opt/concourse/worker/volumes/live/4e25a0be-45cc-4b73-4314-4604f00e30a4/volume/importlib-metadata_1617877365451/work
 importlib-resources==5.2.2
 ipykernel==6.0.3
