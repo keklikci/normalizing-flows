@@ -1,0 +1,23 @@
+MAF[SHIFT-SCALE] FLOW
+p-val[training - qtrained] = 0.7401788062957237
+p-val[testing - qtrained] = 0.14589661265958892
+
+MAF[SHIFT-ONLY] FLOW
+p-val[training - qtrained] = 0.00016706604838461847
+p-val[testing - qtrained] = 0.00014387057304583357
+
+NICE FLOW
+p-val[training - qtrained] = 0.021549180730491897
+p-val[testing - qtrained] = 0.0001677666978882805
+
+REALNVP FLOW
+p-val[training - qtrained] = 0.5740696633175592
+p-val[testing - qtrained] = 0.2676187366474497
+
+IAF[SHIFT-SCALE] FLOW
+p-val[training - qtrained] = 0.540271271984501
+p-val[testing - qtrained] = 0.477423634760926
+
+IAF[SHIFT-ONLY] FLOW
+p-val[training - qtrained] = 0.006013049157647737
+p-val[testing - qtrained] = 0.005207758236831763
