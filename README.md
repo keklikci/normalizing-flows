@@ -5,14 +5,14 @@
   * Beta VAE connected to a normalizing flow of selection
 
 * Noisy moons
-  * initial test data - [see usage](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
+  * [Initial test data](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
 
 * Thoracic surgery 
-  * current test data - [find out more](https://www.kaggle.com/sid321axn/thoraric-surgery)
+  * [Current test data](https://www.kaggle.com/sid321axn/thoraric-surgery)
 
 * Beta-VAE 
-  * variational autoencoder algorithm extended with a beta parameter to put implicit pressure on the learnt posterior
-  * [find out more](https://paperswithcode.com/method/beta-vae)
+  * Variational autoencoder algorithm extended with a beta parameter to put implicit pressure on the learnt posterior
+  * [Find out more](https://paperswithcode.com/method/beta-vae)
 
 ### Updates 
 * [Preprocessing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` as well.
