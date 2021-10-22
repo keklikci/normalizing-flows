@@ -17,6 +17,7 @@
 ### Updates 
 * [Preprocessing](https://github.com/kaanguney/normalizing_flows/tree/main/scripts/preprocessing) currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` as well.
 * Refer to [beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of date of this commit.
+* A [preprint](https://github.com/kaanguney/beta-vae-normalizing-flows/blob/main/KEKLIKCI22102021.pdf) is in process for submission to [arxiV](https://arxiv.org/).
   
 ### Performance Evaluation 
   * KL Divergence
