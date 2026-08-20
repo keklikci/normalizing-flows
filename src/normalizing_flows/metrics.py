@@ -43,8 +43,8 @@ def ks2d2s(
         r1 = pearsonr(x1, y1)[0]
         r2 = pearsonr(x2, y2)[0]
         correlation = np.sqrt(1 - 0.5 * (r1**2 + r2**2))
-        scaled = statistic * effective_n / (
-            1 + correlation * (0.25 - 0.75 / effective_n)
+        scaled = (
+            statistic * effective_n / (1 + correlation * (0.25 - 0.75 / effective_n))
         )
         pvalue = float(kstwobign.sf(scaled))
     else:

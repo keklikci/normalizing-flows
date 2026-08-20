@@ -5,7 +5,6 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
-%matplotlib inline 
 from sklearn.datasets import make_moons
 from sklearn.preprocessing import StandardScaler
 import tensorflow as tf 

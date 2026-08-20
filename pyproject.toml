@@ -26,6 +26,7 @@ testpaths = ["tests"]
 line-length = 88
 target-version = "py38"
 exclude = ["notebooks"]
+extend-exclude = ["scripts"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 
 import seaborn as sns
 import matplotlib.pyplot as plt 
-%matplotlib inline
 
 #
 filename = '/Users/kaanguney.keklikci/Desktop/Erasmus+/Heidelberg/data/ThoraricSurgery.csv'

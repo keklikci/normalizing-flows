@@ -1,6 +1,5 @@
 """Canonical script generated from beta-vae-iaf-thoracic-surgery-shift-only_v1.1.ipynb."""
 
-%run 'preprocessing/preprocessing_v1.1.ipynb'
 
 #
 import os 
@@ -11,7 +10,6 @@ import pandas as pd
 import seaborn as sns 
 sns.set_style('white')
 import matplotlib.pyplot as plt
-%matplotlib inline 
 from sklearn.datasets import make_moons
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
