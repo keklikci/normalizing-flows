@@ -1,34 +1,61 @@
-# Normalizing Flows
+# Normalizing flows
 
-### Overview
-* Beta-VAE-Normalizing-Flows
-  * Beta VAE connected to a normalizing flow of selection
+Beta-VAE experiments with normalizing flows for variational inference and
+generative modeling.
 
-* Noisy moons
-  * [Initial test data](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
+## Project layout
 
-* Thoracic surgery 
-  * [Current test data](https://www.kaggle.com/sid321axn/thoraric-surgery)
+- `src/normalizing_flows` contains reusable statistical utilities
+- `scripts` contains the canonical Python experiment scripts
+- `notebooks` contains archived notebook versions of the experiments
+- `tests` contains fast numerical and repository structure checks
+- `requirements-legacy.txt` preserves the original TensorFlow 2.5 environment
 
-* Beta-VAE 
-  * Variational autoencoder algorithm extended with a beta parameter to put implicit pressure on the learned posterior
-  * [Find out more](https://paperswithcode.com/method/beta-vae)
+Archived notebooks are retained for provenance. Run the scripts when a
+repeatable Python entry point is preferred.
 
-### Updates 
-* Preprocessing currently supports a dataset called `prostate.xls`. Now supports `ThoracicSurgery.csv` as well.
-* Refer to [beta-vae-normalizing-flows](https://github.com/kaanguney/normalizing_flows/tree/main/beta-vae-normalizing-flows) for latest results as of date of this commit.
-  
-### Performance Evaluation 
-  * KL Divergence
-  * MAE
-  * Cross Entropy
-  * [2-dimensional Kolmogorov-Smirnov Test](https://github.com/syrte/ndtest/blob/master/ndtest.py)
+## Setup
 
-### References
-* Rezende, D. J., & Mohamed, S. (2015). [Variational Inference with Normalizing Flows.](https://arxiv.org/abs/1505.05770v6)
-* Kobyzev, I., Prince, S. J. D., & Brubaker, M. A. (2019). [Normalizing Flows: An Introduction and Review of Current Methods.](https://arxiv.org/abs/1908.09257v4)
-* [Probabilistic Deep Learning with TensorFlow 2 by Imperial College London](https://www.coursera.org/learn/probabilistic-deep-learning-with-tensorflow2)
-* Blog posts
-  * [Eric Jang](https://github.com/ericjang/normalizing-flows-tutorial)
-  * [Lilian Weng](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
-* [TensorFlow Probability](https://www.tensorflow.org/probability)
+The supported package manager is [uv](https://docs.astral.sh/uv/).
+
+```bash
+uv sync
+```
+
+The default environment installs the reusable metrics package and development
+tools. The legacy TensorFlow experiments require the pinned environment in
+`requirements-legacy.txt` and may require an x86 Python environment because
+TensorFlow 2.5 does not provide Apple Silicon wheels.
+
+## Experiments
+
+The scripts cover noisy moons, thoracic surgery preprocessing, and Beta-VAE
+experiments using NICE, RealNVP, MAF, and IAF flows. Dataset paths are kept in
+the experiment scripts and must be updated for a local dataset checkout.
+
+```bash
+uv run python scripts/beta-vae-iaf-noisy-moons.py
+```
+
+Experiments can be slow and may require TensorFlow, TensorFlow Probability,
+datasets, and a graphical backend. They are not part of the default test run.
+
+## Quality checks
+
+```bash
+uv run ruff format --check .
+uv run ruff check .
+uv run pytest
+```
+
+Tests cover the reusable two-dimensional KS and energy statistics plus script
+syntax and notebook-to-script parity. Full model training and notebook
+execution remain manual validation steps.
+
+## References
+
+- [Variational inference with normalizing flows](https://arxiv.org/abs/1505.05770)
+- [Normalizing flows an introduction and review](https://arxiv.org/abs/1908.09257)
+- [TensorFlow Probability](https://www.tensorflow.org/probability)
+- [Noisy moons](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)
+- [Thoracic surgery dataset](https://www.kaggle.com/sid321axn/thoraric-surgery)
