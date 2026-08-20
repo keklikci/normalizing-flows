@@ -1,6 +1,5 @@
 """Canonical script generated from beta-vae-maf-thoracic-surgery_v1.0.ipynb."""
 
-%run 'preprocessing/preprocessingv1.0.ipynb'
 
 #
 import os 
@@ -10,7 +9,6 @@ import pandas as pd
 import seaborn as sns 
 sns.set_style('white')
 import matplotlib.pyplot as plt
-%matplotlib inline 
 from sklearn.datasets import make_moons
 from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.optimizers import Adam
